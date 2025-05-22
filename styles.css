@@ -1,8 +1,7 @@
-/* -----------------------
-   Import Fonts & Global Styles
------------------------ */
+/* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap');
 
+/* Hide Scrollbar */
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
     display: none;
@@ -21,126 +20,9 @@ body {
     background-color: black;
     overflow: auto;
     scrollbar-width: none;
-    /* Hides scrollbar in Firefox */
 }
 
-/* -----------------------
-   Navbar Section: Optimized Responsive Styles
------------------------ */
-.navbar {
-    background-color: black !important;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: center;
-}
 
-.navbar .container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar-brand img {
-    width: 50px;
-    height: auto;
-}
-
-.navbar-toggler {
-    border: none;
-}
-
-.navbar-collapse {
-    flex-grow: 0;
-    justify-content: center;
-}
-
-.navbar-nav {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-}
-
-.nav-item {
-    margin-left: 20px;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 5px 10px;
-    transition: color 0.3s ease-in-out;
-}
-
-.nav-link:hover {
-    color: #ff9800;
-}
-
-/* Animated Logo */
-@keyframes easeInLogo {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animated-logo {
-    animation: easeInLogo 0.8s ease-in;
-}
-
-/* Responsive Navbar Adjustments */
-@media (max-width: 992px) {
-    .navbar .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar-toggler {
-        margin-bottom: 10px;
-        align-self: flex-end;
-    }
-
-    .navbar-nav {
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-
-    .nav-item {
-        margin: 10px 0;
-    }
-}
-
-/* Navbar Transition Effects */
-.navbar-collapse {
-    transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out;
-}
-
-.collapsing {
-    max-height: 0 !important;
-    opacity: 0;
-}
-
-.collapse.show {
-    max-height: 500px;
-    opacity: 1;
-}
-
-/* Typography for Headings */
-h1,
-h2,
-h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-}
 
 /* -----------------------
    Hero Section

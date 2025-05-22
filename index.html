@@ -15,23 +15,30 @@
 </head>
 
 <body>
-
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <!-- Mobile Logo -->
-            <a class="navbar-brand d-lg-none animated-logo" href="#">
-                <img src="./image/web designers logo.png" alt="Logo" width="50">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./image/web designers logo.png" alt="Logo" />
             </a>
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Me</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -39,90 +46,68 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="container">
-            <div class="row hero-content">
-                <!-- Text Content -->
-                <div class="col-md-6 text-content">
-                    <h1 class="hero-title">Welcome!</h1>
-                    <p class="hero-subtitle">I am a Graphic Designer</p>
-                    <button class="btn">View My Portfolio</button>
-                </div>
-                <!-- Image Content -->
-                <div class="col-md-6">
-                    <img src="./image/web designers logo.png" alt="Logo" class="hero-image" height="400px">
-                </div>
+        <div class="row">
+            <div class="text-content">
+                <h1>Welcome!</h1>
+                <p>I am a Graphic Designer</p>
+                <a href="#portfolio" class="btn">View My Portfolio</a>
             </div>
+            <img src="./image/web designers logo.png" alt="Logo" />
         </div>
     </section>
 
     <!-- About Designer Section -->
     <section class="about-designer" id="about">
-        <div class="container">
-            <div class="row">
-                <!-- Designer's Image -->
-                <div class="col-md-6">
-                    <img src="./image/WhatsApp Image 2025-05-21 at 14.00.50_ad037a491.png" alt="Designer Image"
-                        class="designer-image" height="200px">
-                </div>
-                <!-- Designer's Bio -->
-                <div class="col-md-6">
-                    <div class="designer-info">
-                        <h2>Hello, I'm Leo!</h2>
-                        <p>
-                            I’m a passionate graphic designer and brand strategist, helping business owners (in and
-                            outside Nigeria) turn their ideas into strategic, beautiful, and bold visuals that actually
-                            attract the right customers.
-                        </p>
-                        <a href="#portfolio" class="btn">View My Work</a>
-                    </div>
-                </div>
+        <div class="row">
+            <img src="./image/WhatsApp Image 2025-05-21 at 14.00.50_ad037a491.png" alt="Designer Image" />
+            <div class="designer-info">
+                <h2>Hello, I'm Leo!</h2>
+                <p>
+                    I’m a passionate graphic designer and brand strategist, helping business owners (in and
+                    outside Nigeria) turn their ideas into strategic, beautiful, and bold visuals that actually
+                    attract the right customers.
+                </p>
+                <a href="#portfolio" class="btn">View My Work</a>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section class="skills" id="portfolio">
-        <div class="container-fluid">
-            <h4>S K I L L S</h4>
-            <h2>Professional Skills</h2>
-            <div class="skills-list">
-                <!-- Adobe Photoshop -->
-                <div class="skill-item">
-                    <i class="bi bi-brush"></i>
-                    <span>Adobe Photoshop</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
+        <h2>Professional Skills</h2>
+        <div class="skills-list">
+            <div class="skill-item">
+                <i class="bi bi-brush"></i>
+                <span>Adobe Photoshop</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%"></div>
                 </div>
-                <!-- Adobe Illustrator -->
-                <div class="skill-item">
-                    <i class="bi bi-vector-pen"></i>
-                    <span>Adobe Illustrator</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
+            </div>
+            <div class="skill-item">
+                <i class="bi bi-vector-pen"></i>
+                <span>Adobe Illustrator</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%"></div>
                 </div>
-                <!-- Adobe InDesign -->
-                <div class="skill-item">
-                    <i class="bi bi-layout-text-window"></i>
-                    <span>Adobe InDesign</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
+            </div>
+            <div class="skill-item">
+                <i class="bi bi-layout-text-window"></i>
+                <span>Adobe InDesign</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%"></div>
                 </div>
-                <!-- Canva -->
-                <div class="skill-item">
-                    <i class="bi bi-palette"></i>
-                    <span>Canva</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 95%;"></div>
-                    </div>
+            </div>
+            <div class="skill-item">
+                <i class="bi bi-palette"></i>
+                <span>Canva</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 95%"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

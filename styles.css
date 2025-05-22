@@ -1,7 +1,55 @@
-/* Centering Navbar */
+/* Keep scrolling enabled but remove scrollbar */
+html {
+    overflow: hidden;
+}
+
+body {
+    overflow-y: scroll; /* Enables scrolling */
+    -ms-overflow-style: none; /* Hides scrollbar in Internet Explorer & Edge */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+/* Hide scrollbar for WebKit-based browsers (Chrome, Safari, Edge) */
+body::-webkit-scrollbar {
+    width: 0px; /* Makes scrollbar invisible */
+    display: none;
+}
+
+/* Make the navbar fixed */
 .navbar {
-    display: flex;
-    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    /* Solid black */
+    z-index: 1000;
+}
+
+/* Adjust page content to prevent overlap with navbar */
+body {
+    padding-top: 60px;
+    /* Ensures content is visible below fixed navbar */
+}
+
+/* Styling the Logo */
+.logo {
+    height: 40px;
+    width: auto;
+    animation: dropDown 0.5s ease-in-out;
+}
+
+/* Drop-down animation */
+@keyframes dropDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Centering Nav Links */
@@ -21,16 +69,49 @@
     color: #17a2b8 !important;
 }
 
-/* Responsive Tweaks for Small Screens */
+
+
+
+
+/* Hero Section start */
+.hero {
+    background-color: #000; /* Solid black */
+    color: #fff; /* White text */
+    padding: 100px 0; /* Spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Full height */
+}
+
+/* Hero Text */
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+}
+
+/* Hero Image */
+.hero-logo {
+    height: 400px;
+    width: auto;
+}
+
+
+
+/* Responsive Tweaks */
 @media (max-width: 768px) {
+    /* Nav bar starts */
     .navbar {
         justify-content: space-between;
     }
-    
+
     .navbar-brand {
         display: block;
-        font-size: 1.2rem;
-        font-weight: bold;
     }
 
     .navbar-toggler {
@@ -41,4 +122,27 @@
         font-size: 1rem;
         text-align: center;
     }
+
+
+    /* Hero section start */
+    /* Hide the big logo */
+    .hero-logo {
+        display: none;
+    }
+
+    /* Center text content */
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
 }
+

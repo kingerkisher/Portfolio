@@ -1,19 +1,5 @@
 /* Keep scrolling enabled but remove scrollbar */
-html {
-    overflow: hidden;
-}
 
-body {
-    overflow-y: scroll; /* Enables scrolling */
-    -ms-overflow-style: none; /* Hides scrollbar in Internet Explorer & Edge */
-    scrollbar-width: none; /* Hides scrollbar in Firefox */
-}
-
-/* Hide scrollbar for WebKit-based browsers (Chrome, Safari, Edge) */
-body::-webkit-scrollbar {
-    width: 0px; /* Makes scrollbar invisible */
-    display: none;
-}
 
 /* Make the navbar fixed */
 .navbar {
@@ -75,14 +61,18 @@ body {
 
 /* Hero Section start */
 .hero {
-    background-color: #000; /* Solid black */
-    color: #fff; /* White text */
-    padding: 100px 0; /* Spacing */
+    background-color: #000;
+    /* Solid black */
+    color: #fff;
+    /* White text */
+    padding: 100px 0;
+    /* Spacing */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh; /* Full height */
+    height: 100vh;
+    /* Full height */
 }
 
 /* Hero Text */
@@ -101,10 +91,120 @@ body {
     width: auto;
 }
 
+.hero-btn {
+    background-color: #ff9800;
+    /* Bootstrap primary color */
+    color: #fff;
+    /* White text */
+    /* padding: 10px 20px; */
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hero-btn:hover {
+    background: #e68900;
+}
+
+
+
+
+/* About Designer Section */
+.about-designer {
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    padding: 100px 0;
+}
+
+/* Designer Image */
+.designer-photo {
+    height: 400px;
+    width: auto;
+    border-radius: 10px; /* Slight rounded corners */
+}
+
+/* Designer Info */
+.about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.about-text {
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: #000;
+    color: #fff;
+}
+
+h2 {
+    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+.skills-list {
+    width: 100%;
+    max-width: 600px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures even spacing */
+    gap: 20px;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+}
+
+/* Icon Styling */
+.skill-item i {
+    font-size: 28px;
+    color: #fff;
+    width: 40px; /* Fixed width for uniform alignment */
+    text-align: center;
+}
+
+/* Skill Name */
+.skill-item span {
+    flex: 1;
+    text-align: left;
+}
+
+/* Progress Bar */
+.progress-bar {
+    flex: 2;
+    height: 10px;
+    background: #444;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #ff9800;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
 
 
 /* Responsive Tweaks */
 @media (max-width: 768px) {
+
     /* Nav bar starts */
     .navbar {
         justify-content: space-between;
@@ -144,5 +244,46 @@ body {
     .hero-subtitle {
         font-size: 1.2rem;
     }
+
+
+
+        .about-designer {
+        text-align: center;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .designer-photo {
+        height: 300px;
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-text {
+        font-size: 1.2rem;
+    }
+
+
+        .skills-list {
+        max-width: 90%;
+    }
+
+    .skill-item {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .progress-bar {
+        width: 80%;
+    }
 }
+
+
+
 

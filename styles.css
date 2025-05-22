@@ -1,7 +1,8 @@
-/* Import Fonts */
+/* -----------------------
+   Import Fonts & Global Styles
+----------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap');
 
-/* Hide Scrollbar */
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
     display: none;
@@ -20,49 +21,61 @@ body {
     background-color: black;
     overflow: auto;
     scrollbar-width: none;
+    /* Hides scrollbar in Firefox */
 }
 
 /* -----------------------
-   Navbar Styling
+   Navbar Section: Optimized Responsive Styles
 ----------------------- */
 .navbar {
     background-color: black !important;
-    padding: 15px 20px;
+    padding: 10px 20px;
     display: flex;
     justify-content: center;
 }
 
-@media screen and (min-width: 992px) {
-    .navbar {
-        max-width: 400px;
-        margin: auto;
-        border-radius: 50px;
-        transition: all 0.4s ease-in-out;
-    }
-}
-
-.navbar:hover {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.nav-links {
-    list-style: none;
+.navbar .container {
+    width: 100%;
     display: flex;
-    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.nav-links li {
-    display: inline;
+.navbar-brand img {
+    width: 50px;
+    height: auto;
 }
 
-.nav-links a {
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+    justify-content: center;
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
     text-decoration: none;
     color: white;
     font-size: 18px;
-    transition: 0.3s ease-in-out;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
 }
 
-.nav-links a:hover {
+.nav-link:hover {
     color: #ff9800;
 }
 
@@ -84,15 +97,25 @@ body {
 }
 
 /* Responsive Navbar Adjustments */
-@media screen and (max-width: 768px) {
-    .nav-links {
+@media (max-width: 992px) {
+    .navbar .container {
         flex-direction: column;
         align-items: center;
-        gap: 15px;
     }
 
-    .navbar {
-        padding: 10px;
+    .navbar-toggler {
+        margin-bottom: 10px;
+        align-self: flex-end;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin: 10px 0;
     }
 }
 
@@ -111,7 +134,7 @@ body {
     opacity: 1;
 }
 
-/* Typography */
+/* Typography for Headings */
 h1,
 h2,
 h3 {

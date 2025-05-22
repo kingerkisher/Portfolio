@@ -1,1 +1,44 @@
+/* Centering Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+}
 
+/* Centering Nav Links */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Styling Nav Links */
+.nav-link {
+    transition: color 0.3s ease-in-out;
+    font-size: 1.2rem;
+}
+
+.nav-link:hover {
+    color: #17a2b8 !important;
+}
+
+/* Responsive Tweaks for Small Screens */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+    }
+    
+    .navbar-brand {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        text-align: center;
+    }
+}

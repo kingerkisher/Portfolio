@@ -1,406 +1,308 @@
-/* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap');
-
-/* Hide Scrollbar */
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-    display: none;
-}
-
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Lato', sans-serif;
-    padding-top: 70px; /* Offset for fixed navbar */
-    background-color: black;
-    overflow: auto;
-    scrollbar-width: none;
-}
-
-/* -----------------------
-   Navbar Styling
------------------------ */
-.navbar {
-    background-color: black !important;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-@media screen and (min-width: 992px) {
-    .navbar {
-        max-width: 400px;
-        margin: auto;
-        border-radius: 50px;
-        transition: all 0.4s ease-in-out;
-    }
-}
-
-.navbar:hover {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    padding-left: 0;
-    margin: 0;
-}
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.125rem;
-    transition: 0.3s ease-in-out;
-}
-
-.nav-links a:hover {
-    color: #ff9800;
-}
-
-/* Animated Logo */
-@keyframes easeInLogo {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
+    body {
+        margin: 0;
+        font-family: "Lato", sans-serif;
+        padding-top: 70px;
+        /* space for fixed navbar */
+        background-color: black;
+        color: white;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animated-logo {
-    animation: easeInLogo 0.8s ease-in;
-}
-
-/* Responsive Navbar Adjustments */
-@media screen and (max-width: 768px) {
-    .navbar {
-        padding: 10px 15px;
-        max-width: 100%; /* allow full width */
-        border-radius: 0; /* no rounding for mobile */
-        justify-content: space-between; /* space between brand and toggler */
+    h1,
+    h2,
+    h3 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        margin-bottom: 1rem;
     }
 
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        width: 100%;
-        padding-left: 0;
+    a.btn {
+        background: #ff9800;
+        border-radius: 8px;
+        padding: 12px 24px;
+        color: white !important;
+        text-decoration: none;
+        font-size: 1.125rem;
+        transition: 0.3s;
+        display: inline-block;
     }
 
-    .navbar-nav {
-        width: 100%;
-        padding-left: 0;
+    a.btn:hover {
+        background: #e68900;
+        color: white !important;
+        text-decoration: none;
     }
 
-    .navbar-collapse {
-        width: 100%;
+    /* Navbar */
+    nav.navbar {
+        background-color: black !important;
+        box-shadow: 0 0 15px rgba(255 152 0 / 0.5);
+        padding: 0.5rem 1rem;
+        z-index: 1030;
     }
 
-    .navbar-toggler {
-        margin-left: auto;
-        border: none;
-    }
-}
-
-/* Navbar Transition Effects */
-.navbar-collapse {
-    transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out;
-}
-
-.collapsing {
-    max-height: 0 !important;
-    opacity: 0;
-}
-
-.collapse.show {
-    max-height: 500px;
-    opacity: 1;
-}
-
-/* Typography */
-h1,
-h2,
-h3 {
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* -----------------------
-   Hero Section
------------------------ */
-.hero {
-    border: 1px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-    color: white;
-    padding: 40px;
-}
-
-.container {
-    max-width: 1100px;
-    width: 100%;
-}
-
-.hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.text-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.hero-title {
-    font-size: 3rem; /* Use rem for better scaling */
-}
-
-.hero-subtitle {
-    font-size: 1.25rem; /* Use rem for better scaling */
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 24px;
-    background: #ff9800;
-    color: white;
-    text-decoration: none;
-    font-size: 1.125rem; /* Use rem for better scaling */
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #e68900;
-}
-
-.hero-image {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Mobile: Slide-Out Effect for Hero Image */
-@keyframes slideOutRight {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    to {
-        transform: translateX(150px);
-        opacity: 0;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .hero-image {
-        animation: slideOutRight 0.8s ease-in-out forwards;
-    }
-
-    .hero-content {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        height: auto; /* Allow height to adjust */
-    }
-
-    .text-content {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        transition: transform 0.6s ease-in-out;
-    }
-}
-
-/* -----------------------
-   About Designer Section
------------------------ */
-.about-designer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    padding: 60px 20px;
-    background: #ffffff;
-    color: #333;
-}
-
-.about-designer .container {
-    max-width: 1100px;
-    width: 100%;
-}
-
-.row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.designer-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-}
-
-.designer-info {
-    max-width: 500px;
-    animation: easeInText 1s ease-in-out forwards;
-    will-change: opacity, transform;
-}
-
-@keyframes easeInText {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.about-designer h2 {
-    font-size: 2.25rem; /* Use rem for better scaling */
-}
-
-.about-designer p {
-    font-size: 1.125rem; /* Use rem for better scaling */
-}
-
-@media screen and (max-width: 768px) {
-    .row {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .designer-info {
-        margin-top: 20px;
+    nav.navbar .container-fluid {
         max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
-    .designer-image {
-        width: 80%;
+    nav.navbar-brand img {
+        height: 48px;
+        width: auto;
+    }
+
+    nav .navbar-nav {
+        font-size: 1.125rem;
+    }
+
+    nav .nav-link {
+        color: white;
+        transition: color 0.3s ease;
+        padding: 0.5rem 0.75rem;
+    }
+
+    nav .nav-link:hover,
+    nav .nav-link.active {
+        color: #ff9800;
+    }
+
+    /* Hero Section */
+    .hero {
+        min-height: calc(100vh - 70px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem 1rem;
+        color: white;
+    }
+
+    .hero .text-content {
+        max-width: 540px;
         margin: auto;
     }
-}
 
-/* -----------------------
-   Skills Section
------------------------ */
-.skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 60px 20px;
-    background: #000;
-    color: #fff;
-}
-
-.skills h2 {
-    font-size: 2.25rem; /* Use rem for better scaling */
-    color: #fff;
-    text-align: center;
-}
-
-.skills-list {
-    width: 100%;
-    max-width: 800px;
-}
-
-.skill-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 10px 15px;
-    font-size: 1.25rem; /* Use rem for better scaling */
-    color: #fff;
-}
-
-.skill-item i {
-    font-size: 1.75rem; /* Use rem for better scaling */
-    color: #fff;
-    width: 40px;
-    text-align: center;
-}
-
-.skill-item span {
-    flex: 1;
-    text-align: left;
-}
-
-.progress-bar {
-    flex: 2;
-    height: 12px;
-    background: #444;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.progress {
-    height: 100%;
-    background: #ff9800;
-    border-radius: 5px;
-    transition: width 0.5s ease-in-out;
-}
-
-/* On very large screens, span the full viewport width */
-@media screen and (min-width: 1200px) {
-    .progress-bar {
-        width: 100vw;
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
     }
-}
 
-@media screen and (max-width: 1199px) {
-    .progress-bar {
-        width: 70%;
+    .hero p {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+        font-family: "Lato", sans-serif;
     }
-}
 
-@media screen and (max-width: 768px) {
+    .hero img {
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+        margin-top: 2rem;
+    }
+
+    /* About Designer Section */
+    .about-designer {
+        background: white;
+        color: #333;
+        padding: 4rem 1rem;
+        text-align: center;
+    }
+
+    .about-designer .row {
+        align-items: center;
+        justify-content: center;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .about-designer img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        max-height: 300px;
+    }
+
+    .about-designer h2 {
+        font-size: 2.25rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-designer p {
+        font-size: 1.125rem;
+        max-width: 550px;
+        margin: auto;
+    }
+
+    /* Skills Section */
+    .skills {
+        background: black;
+        color: white;
+        padding: 4rem 1rem;
+        text-align: center;
+    }
+
+    .skills h2 {
+        font-size: 2.25rem;
+        margin-bottom: 2rem;
+        font-family: "Montserrat", sans-serif;
+    }
+
     .skills-list {
-        max-width: 90%;
+        max-width: 800px;
+        margin: auto;
     }
 
     .skill-item {
-        flex-direction: row;
+        display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        margin-bottom: 1.25rem;
+        gap: 1rem;
+        font-size: 1.25rem;
+    }
+
+    .skill-item i {
+        font-size: 1.75rem;
+        width: 40px;
         text-align: center;
+        flex-shrink: 0;
+    }
+
+    .skill-item span {
+        flex: 1;
+        text-align: left;
+        margin-left: 0.75rem;
     }
 
     .progress-bar {
-        width: 80%;
+        flex: 2;
+        height: 12px;
+        background: #444;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-left: 1rem;
     }
-}
 
+    .progress {
+        height: 100%;
+        background: #ff9800;
+        border-radius: 5px;
+        transition: width 0.5s ease-in-out;
+    }
+
+    /* Responsive adjustments */
+    @media (min-width: 768px) {
+
+        /* Hero Section side by side */
+        .hero {
+            text-align: left;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .hero .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .hero .text-content {
+            max-width: 50%;
+        }
+
+        .hero img {
+            max-width: 45%;
+            margin: 0;
+            max-height: 400px;
+        }
+
+        /* About Designer side by side */
+        .about-designer .row {
+            display: flex;
+            text-align: left;
+        }
+
+        .about-designer h2,
+        .about-designer p {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        .about-designer img {
+            max-width: 40%;
+            margin: 0;
+        }
+
+        /* Skills list flex */
+        .skills-list {
+            display: block;
+        }
+    }
+
+    @media (max-width: 767px) {
+        nav .navbar-collapse {
+            background-color: black;
+            padding: 1rem;
+            border-radius: 0 0 8px 8px;
+            margin-top: 0.3rem;
+        }
+
+        nav .navbar-toggler {
+            border: none;
+            outline: none;
+        }
+
+        nav .navbar-toggler:focus {
+            box-shadow: 0 0 4px 2px #ff9800;
+        }
+
+        nav .nav-link {
+            padding: 0.5rem 0;
+        }
+
+        .hero {
+            padding: 2rem 1rem 3rem 1rem;
+        }
+
+        .hero .row {
+            flex-direction: column;
+        }
+
+        .hero .text-content,
+        .hero img {
+            max-width: 100%;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-designer .row {
+            flex-direction: column;
+        }
+
+        .about-designer img {
+            max-width: 80%;
+            margin: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-list {
+            max-width: 100%;
+        }
+
+        .skill-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .skill-item span {
+            margin-left: 0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            margin-left: 0;
+        }
+    }

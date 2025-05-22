@@ -2,18 +2,143 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap');
 
 /* Hide Scrollbar */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: 'Lato', sans-serif;
-    padding-top: 70px;
-    /* Offset for fixed navbar */
+    padding-top: 70px; /* Offset for fixed navbar */
     background-color: black;
     overflow: auto;
     scrollbar-width: none;
 }
 
+/* -----------------------
+   Navbar Styling
+----------------------- */
+.navbar {
+    background-color: black !important;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
 
+@media screen and (min-width: 992px) {
+    .navbar {
+        max-width: 400px;
+        margin: auto;
+        border-radius: 50px;
+        transition: all 0.4s ease-in-out;
+    }
+}
+
+.navbar:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding-left: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.125rem;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
+}
+
+/* Animated Logo */
+@keyframes easeInLogo {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-logo {
+    animation: easeInLogo 0.8s ease-in;
+}
+
+/* Responsive Navbar Adjustments */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+        max-width: 100%; /* allow full width */
+        border-radius: 0; /* no rounding for mobile */
+        justify-content: space-between; /* space between brand and toggler */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+        border: none;
+    }
+}
+
+/* Navbar Transition Effects */
+.navbar-collapse {
+    transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.collapsing {
+    max-height: 0 !important;
+    opacity: 0;
+}
+
+.collapse.show {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
 
 /* -----------------------
    Hero Section
@@ -48,13 +173,11 @@ body {
 }
 
 .hero-title {
-    font-size: 48px;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem; /* Use rem for better scaling */
 }
 
 .hero-subtitle {
-    font-size: 20px;
-    font-family: 'Lato', sans-serif;
+    font-size: 1.25rem; /* Use rem for better scaling */
 }
 
 .btn {
@@ -64,7 +187,7 @@ body {
     background: #ff9800;
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.125rem; /* Use rem for better scaling */
     border-radius: 8px;
     transition: 0.3s;
 }
@@ -101,12 +224,11 @@ body {
         justify-content: center;
         align-items: center;
         text-align: center;
-        height: 100vh;
+        height: auto; /* Allow height to adjust */
     }
 
     .text-content {
         width: 100%;
-        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -165,13 +287,11 @@ body {
 }
 
 .about-designer h2 {
-    font-size: 36px;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 2.25rem; /* Use rem for better scaling */
 }
 
 .about-designer p {
-    font-size: 18px;
-    font-family: 'Lato', sans-serif;
+    font-size: 1.125rem; /* Use rem for better scaling */
 }
 
 @media screen and (max-width: 768px) {
@@ -206,8 +326,7 @@ body {
 }
 
 .skills h2 {
-    font-size: 36px;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 2.25rem; /* Use rem for better scaling */
     color: #fff;
     text-align: center;
 }
@@ -223,13 +342,12 @@ body {
     justify-content: space-between;
     gap: 20px;
     padding: 10px 15px;
-    font-size: 20px;
-    font-family: 'Lato', sans-serif;
+    font-size: 1.25rem; /* Use rem for better scaling */
     color: #fff;
 }
 
 .skill-item i {
-    font-size: 28px;
+    font-size: 1.75rem; /* Use rem for better scaling */
     color: #fff;
     width: 40px;
     text-align: center;
@@ -284,3 +402,4 @@ body {
         width: 80%;
     }
 }
+

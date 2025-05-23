@@ -230,34 +230,96 @@ h2 {
     /* Orange for emphasis */
 }
 
-/* Services Grid */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* Connecting Lines */
+.connecting-line {
+
+    width: 5px;
+    height: 100%;
+    background: #ff9800;
+    /* Orange */
+    position: absolute;
+    left: -20px;
+    /* Aligns both left and right items */
+    top: 0;
+}
+
+/* Services Wrapper */
+.services-wrapper {
+    display: flex;
+    align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+/* Service Row */
+.service-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
 }
 
 /* Service Item */
 .service-item {
-    background: #222;
-    /* Dark gray for contrast */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
+    padding: 30px;
+    border-radius: 50px;
+    /* Rounded corners */
+    text-align: left;
+    /* Align text to the left */
+    flex: 1;
+    position: relative;
 }
 
-.service-item:hover {
-    transform: translateY(-5px);
+/* Border ONLY on H3 */
+.service-item h3 {
+    border: 3px solid #ff9800;
+    /* Orange border */
+    border-radius: 50px;
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    margin-left: 0;
+    /* Align to left */
 }
 
-/* Service Icon */
-.service-icon {
-    font-size: 2.5rem;
-    color: #ff9800;
-    /* Orange */
+/* Adding the Left Line to All Items */
+.service-item::before {
+    content: "";
+    width: 5px;
+    height: 100%;
+    background: #ff9800;
+    position: absolute;
+    left: -20px;
+    /* Places it on the left for both */
+    top: 0;
 }
+
+/* Short Connecting Line from H3 */
+.service-item h3 {
+    border: 3px solid #ff9800;
+    /* Orange border */
+    border-radius: 50px;
+    /* Rounded edges */
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    /* Needed for pseudo-element */
+}
+
+/* Horizontal Connector Line */
+.service-item h3::before {
+    content: "";
+    width: 40px;
+    /* Short connecting line */
+    height: 3px;
+    background: #ff9800;
+    position: absolute;
+    left: -45px;
+    /* Extends left */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 
 
 /* Responsive Tweaks */
@@ -341,10 +403,19 @@ h2 {
         width: 80%;
     }
 
-    .services-grid {
-        grid-template-columns: 1fr;
+
+    .service-item::before {
+        display: none;
+        /* Hide lines on small screens */
     }
+
+    .service-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
+
 
 
 

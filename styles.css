@@ -22,7 +22,7 @@ body {
 
 /* Styling the Logo */
 .logo {
-    height: 40px;
+    height: 70px;
     width: auto;
     animation: dropDown 0.5s ease-in-out;
 }
@@ -54,7 +54,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #ffcf00 !important;
+    color:#ffcf00!important;
 }
 
 
@@ -96,12 +96,12 @@ body {
 .hero-btn {
     background-color: #ffcf00;
     /* Bootstrap primary color */
-    color: #fff;
+    color: #000;
     /* White text */
     /* padding: 10px 20px; */
     border: none;
     border-radius: 10px;
-    font-size: 1.2rem;
+    font-size: 0.7rem;
     transition: background-color 0.3s ease-in-out;
 }
 

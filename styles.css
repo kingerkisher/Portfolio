@@ -1,5 +1,6 @@
 /* Keep scrolling enabled but remove scrollbar */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+/* Import full Poppins font weights */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
 /* Make the navbar fixed */
@@ -22,7 +23,7 @@ body {
 
 /* Styling the Logo */
 .logo {
-    height: 70px;
+    /* height: 70px; */
     width: auto;
     animation: dropDown 0.5s ease-in-out;
 }
@@ -50,11 +51,11 @@ body {
 /* Styling Nav Links */
 .nav-link {
     transition: color 0.3s ease-in-out;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 .nav-link:hover {
-    color:#ffcf00!important;
+    color: #ffcf00 !important;
 }
 
 
@@ -79,18 +80,19 @@ body {
 
 /* Hero Text */
 .hero-title {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 5.5rem;
+    /* font-weight: light; */
+    /* line-height: 1.2; */
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 /* Hero Image */
 .hero-logo {
-    height: 600px;
-    width: auto;
+    height: 1000px;
+    width: 1000px;
 }
 
 .hero-btn {
@@ -101,7 +103,7 @@ body {
     /* padding: 10px 20px; */
     border: none;
     border-radius: 10px;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -112,6 +114,7 @@ body {
 
 
 .btn-hero {
+
     background-color: #ffcf00;
     /* Bootstrap primary color */
     color: #000;
@@ -291,7 +294,7 @@ body {
 
 /* Border ONLY on H3 */
 .service-item h3 {
-    border: 1px solid  #ffcf00;
+    border: 1px solid #ffcf00;
     /* Orange border */
     border-radius: 50px;
     display: inline-block;
@@ -306,7 +309,7 @@ body {
     content: "";
     width: 1px;
     height: 100%;
-    background:  #ffcf00;
+    background: #ffcf00;
     position: absolute;
     left: -20px;
     /* Places it on the left for both */
@@ -315,7 +318,7 @@ body {
 
 /* Short Connecting Line from H3 */
 .service-item h3 {
-    border: 1px solid  #ffcf00;
+    border: 1px solid #ffcf00;
     /* Orange border */
     border-radius: 50px;
     /* Rounded edges */
@@ -331,7 +334,7 @@ body {
     width: 50px;
     /* Short connecting line */
     height: 1px;
-    background:  #ffcf00;
+    background: #ffcf00;
     position: absolute;
     left: -50px;
     /* Extends left */
@@ -533,16 +536,32 @@ h5 {
 
     /* Center text content */
     .hero {
-        flex-direction: column;
+        /* border: 1px solid #ffcf00; */
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        ;
+    }
+
+    .hero-bttn {
+        display: flex;
         justify-content: center;
         text-align: center;
     }
 
+
     .hero-title {
+        display: flex;
+        justify-content: center;
+        text-align: center;
         font-size: 2rem;
     }
 
     .hero-subtitle {
+        display: flex;
+        justify-content: center;
+        text-align: center;
         font-size: 1.2rem;
     }
 

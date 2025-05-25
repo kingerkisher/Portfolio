@@ -1,4 +1,5 @@
 /* Keep scrolling enabled but remove scrollbar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 
 /* Make the navbar fixed */
@@ -15,6 +16,7 @@
 /* Adjust page content to prevent overlap with navbar */
 body {
     padding-top: 60px;
+    font-family: 'Poppins', sans-serif;
     /* Ensures content is visible below fixed navbar */
 }
 
@@ -92,19 +94,39 @@ body {
 }
 
 .hero-btn {
-    background-color: #ff9800;
+    background-color: #ffcf00;
     /* Bootstrap primary color */
     color: #fff;
     /* White text */
     /* padding: 10px 20px; */
     border: none;
-    border-radius: 30px;
+    border-radius: 10px;
     font-size: 1.2rem;
     transition: background-color 0.3s ease-in-out;
 }
 
 .hero-btn:hover {
-    background: #e68900;
+    background: #e6b800;
+    color: #000;
+}
+
+
+.btn-hero {
+    background-color: #ffcf00;
+    /* Bootstrap primary color */
+    color: #000;
+    /* White text */
+    /* padding: 10px 20px; */
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-hero:hover {
+    background: #e6b800;
+    color: #fff;
+
 }
 
 
@@ -129,12 +151,15 @@ body {
 
 /* Designer Info */
 .about-title {
-    font-size: 2.5rem;
+    color: #000;
+    /* Black text */
+    font-size: 3.5rem;
+    line-height: 1;
     font-weight: bold;
 }
 
 .about-text {
-    font-size: 1.3rem;
+    font-size: 1.0rem;
     line-height: 1.6;
 }
 
@@ -153,12 +178,6 @@ body {
 }
 
 
-h2 {
-    font-size: 36px;
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
-    text-align: center;
-}
 
 .skills-list {
     width: 100%;
@@ -171,9 +190,8 @@ h2 {
     justify-content: space-between;
     /* Ensures even spacing */
     gap: 20px;
-    padding: 5px 10px;
+    padding: 15px 10px;
     font-size: 20px;
-    font-family: 'Lato', sans-serif;
     color: #fff;
 }
 
@@ -197,7 +215,7 @@ h2 {
 /* Progress Bar */
 .progress-bar {
     flex: 2;
-    height: 10px;
+    height: 1px;
     background: #444;
     border-radius: 5px;
     overflow: hidden;
@@ -206,10 +224,12 @@ h2 {
 
 .progress {
     height: 100%;
-    background: #ff9800;
+    background: #ffcf00;
     border-radius: 5px;
     transition: width 0.5s ease-in-out;
 }
+
+
 
 /* Services Section */
 .services {
@@ -226,16 +246,15 @@ h2 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 40px;
-    color: #ff9800;
+    color: #ffcf00;
     /* Orange for emphasis */
 }
 
 /* Connecting Lines */
 .connecting-line {
-
-    width: 5px;
+    width: 1px;
     height: 100%;
-    background: #ff9800;
+    background: #ffcf00;
     /* Orange */
     position: absolute;
     left: -20px;
@@ -272,7 +291,7 @@ h2 {
 
 /* Border ONLY on H3 */
 .service-item h3 {
-    border: 3px solid #ff9800;
+    border: 1px solid  #ffcf00;
     /* Orange border */
     border-radius: 50px;
     display: inline-block;
@@ -285,9 +304,9 @@ h2 {
 /* Adding the Left Line to All Items */
 .service-item::before {
     content: "";
-    width: 5px;
+    width: 1px;
     height: 100%;
-    background: #ff9800;
+    background:  #ffcf00;
     position: absolute;
     left: -20px;
     /* Places it on the left for both */
@@ -296,7 +315,7 @@ h2 {
 
 /* Short Connecting Line from H3 */
 .service-item h3 {
-    border: 3px solid #ff9800;
+    border: 1px solid  #ffcf00;
     /* Orange border */
     border-radius: 50px;
     /* Rounded edges */
@@ -309,15 +328,21 @@ h2 {
 /* Horizontal Connector Line */
 .service-item h3::before {
     content: "";
-    width: 40px;
+    width: 50px;
     /* Short connecting line */
-    height: 3px;
-    background: #ff9800;
+    height: 1px;
+    background:  #ffcf00;
     position: absolute;
-    left: -45px;
+    left: -50px;
     /* Extends left */
     top: 50%;
     transform: translateY(-50%);
+}
+
+.service-item p {
+    /* border: 1px solid  #ffcf00; */
+    width: 60%;
+    margin-left: 20px;
 }
 
 .back {
@@ -329,18 +354,7 @@ h2 {
     transition: background-color 0.3s ease-in-out;
 }
 
-.btn-hero {
-    background-color: #ff9800;
-    color: #000;
-    /* padding: 20px 40px; */
-    border-radius: 30px;
-    font-size: 1.0rem;
-    transition: background-color 0.3s ease-in-out;
-}
 
-.btn-hero:hover {
-    background: #e68900;
-}
 
 
 /* Resume Section */
@@ -397,7 +411,7 @@ h2 {
     margin-bottom: 5px;
 }
 
-.testimonials{
+.testimonials {
     background-color: #000;
     /* Black background */
     color: #fff;
@@ -416,7 +430,7 @@ h2 {
 }
 
 .d-card {
-    border: 3px solid #ff9800;
+    border: 1px solid #ffcf00;
     background-color: black;
     color: white;
     box-shadow: 0 4px 8px rgba(255, 152, 0, 0.5);
@@ -432,7 +446,7 @@ h2 {
 h5 {
     font-weight: bold;
     margin-top: 10px;
-    color: #ff9800;
+    color: #ffcf00;
 }
 
 .p {
@@ -442,8 +456,10 @@ h5 {
 
 /* Footer Section */
 .footer {
-    background: #000; /* Dark background */
-    color: #fff; /* White text */
+    background: #000;
+    /* Dark background */
+    color: #fff;
+    /* White text */
     padding: 40px 0;
     text-align: center;
 }
@@ -469,7 +485,8 @@ h5 {
 
 .icon {
     font-size: 24px;
-    color: #ff9800; /* Orange accent */
+    color: #ffcf00;
+    /* Orange accent */
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -586,6 +603,3 @@ h5 {
         text-align: center;
     }
 }
-
-
-

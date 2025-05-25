@@ -50,7 +50,7 @@ body {
 /* Styling Nav Links */
 .nav-link {
     transition: color 0.3s ease-in-out;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .nav-link:hover {

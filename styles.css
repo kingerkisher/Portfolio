@@ -23,7 +23,7 @@ body {
 
 /* Styling the Logo */
 .logo {
-    /* height: 70px; */
+    height: 50px;
     width: auto;
     animation: dropDown 0.5s ease-in-out;
 }
@@ -91,8 +91,9 @@ body {
 
 /* Hero Image */
 .hero-logo {
-    height: 1000px;
-    width: 1000px;
+    border: 1px solid #ffcf00;
+    /* height: 700px; */
+    /* width: auto; */
 }
 
 .hero-btn {

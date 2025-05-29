@@ -91,9 +91,9 @@ body {
 
 /* Hero Image */
 .hero-logo {
-    border: 1px solid #ffcf00;
-    /* height: 700px; */
-    /* width: auto; */
+    /* border: 1px solid #ffcf00; */
+    height: 500px;
+    width: auto;
 }
 
 .hero-btn {

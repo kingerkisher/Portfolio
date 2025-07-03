@@ -2,6 +2,16 @@
 /* Import full Poppins font weights */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/* Hide scrollbars while keeping scrolling enabled */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+    overflow-y: scroll;        /* Ensures scrolling stays */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
 
 /* Make the navbar fixed */
 .navbar {
@@ -103,6 +113,7 @@ body {
     /* White text */
     /* padding: 10px 20px; */
     border: none;
+    padding: 20px 20px;
     border-radius: 10px;
     font-size: 0.9rem;
     transition: background-color 0.3s ease-in-out;
@@ -157,9 +168,9 @@ body {
 .about-title {
     color: #000;
     /* Black text */
-    font-size: 3.5rem;
+    font-size: 5.5rem;
     line-height: 1;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .about-text {
@@ -581,7 +592,7 @@ h5 {
     }
 
     .about-title {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .about-text {

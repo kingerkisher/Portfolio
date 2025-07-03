@@ -258,17 +258,15 @@ body {
 }
 
 /* Section Title */
-.services-title {
+/* .services-title {
     font-size: 2.5rem;
-    font-weight: bold;
     margin-bottom: 40px;
     color: #ffcf00;
-    /* Orange for emphasis */
-}
+} */
 
 /* Connecting Lines */
 .connecting-line {
-    width: 1px;
+    width: 3px;
     height: 100%;
     background: #ffcf00;
     /* Orange */
@@ -307,7 +305,7 @@ body {
 
 /* Border ONLY on H3 */
 .service-item h3 {
-    border: 1px solid #ffcf00;
+    border: 3px solid #ffcf00;
     /* Orange border */
     border-radius: 50px;
     display: inline-block;
@@ -320,7 +318,7 @@ body {
 /* Adding the Left Line to All Items */
 .service-item::before {
     content: "";
-    width: 1px;
+    width: 3px;
     height: 100%;
     background: #ffcf00;
     position: absolute;
@@ -331,7 +329,7 @@ body {
 
 /* Short Connecting Line from H3 */
 .service-item h3 {
-    border: 1px solid #ffcf00;
+    border: 3px solid #ffcf00;
     /* Orange border */
     border-radius: 50px;
     /* Rounded edges */
@@ -346,7 +344,7 @@ body {
     content: "";
     width: 50px;
     /* Short connecting line */
-    height: 1px;
+    height: 3px;
     background: #ffcf00;
     position: absolute;
     left: -50px;
@@ -625,6 +623,11 @@ h5 {
     .service-row {
         flex-direction: column;
         align-items: center;
+    }
+    .service-item p{
+        /* border: 1px solid #ffcf00; */
+        width: 100%;
+        margin-left: 0;
     }
 
     .resume-grid {

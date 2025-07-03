@@ -231,7 +231,7 @@ body {
 /* Progress Bar */
 .progress-bar {
     flex: 2;
-    height: 1px;
+    height: 4px;
     background: #444;
     border-radius: 5px;
     overflow: hidden;
